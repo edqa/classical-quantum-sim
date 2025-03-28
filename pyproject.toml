@@ -6,18 +6,19 @@ build-backend = "setuptools.build_meta"
 name = "classical-quantum-sim"
 version = "0.1.0" # Start with 0.1.0 for first functional version
 authors = [
-  { name="edqa", email="your_email@example.com" }, # Replace with your actual email if desired
+  { name="edqa"
 ]
-description = "Simulating quantum-like probabilistic states (superposition, measurement) using multi-bit classical integers."
+description = "Simulating quantum-like probabilistic states, phase, and correlations using multi-bit classical integers." # Slightly updated description
 readme = "README.md"
 requires-python = ">=3.8"
-license = { file="LICENSE" } # Assumes you chose MIT or Apache-2.0 and the file exists
-keywords = ["quantum simulation", "classical simulation", "probabilistic computing", "bit manipulation"]
+license = { file="LICENSE" }
+keywords = ["quantum simulation", "classical simulation", "probabilistic computing", "bit manipulation", "phase simulation", "entanglement simulation"] # Added keywords
 classifiers = [
-    "Development Status :: 3 - Alpha", # Changed from Pre-Alpha as we have basic functionality
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
+    "Intended Audience :: Education", # Added
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License", # Or "License :: OSI Approved :: Apache Software License"
+    "License :: OSI Approved :: MIT License", # Or Apache-2.0
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -27,26 +28,21 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: System :: Hardware :: Symmetric Multi-processing", # Relevant due to bit-level parallelism goal
+    "Topic :: System :: Hardware :: Symmetric Multi-processing",
 ]
 
 # Add dependencies here if/when needed
+dependencies = [
+    # "numpy >= 1.20", # Uncomment if you start using numpy
+]
 
+# Optional dependencies
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",   # For running tests
     "black>=23.0",  # Optional: Code formatter
     "ruff"          # Optional: Fast linter/formatter
-    # Add other dev tools like flake8, mypy if you use them
 ]
-
-# Optional dependencies (e.g., for visualization or advanced features)
-# [project.optional-dependencies]
-# dev = [
-#     "pytest",
-#     "black",
-#     "ruff",
-# ]
 # viz = [
 #     "matplotlib",
 # ]
@@ -55,4 +51,3 @@ dev = [
 "Homepage" = "https://github.com/edqa/classical-quantum-sim"
 "Repository" = "https://github.com/edqa/classical-quantum-sim.git"
 "Bug Tracker" = "https://github.com/edqa/classical-quantum-sim/issues"
-# "Documentation" = "link_to_docs_if_you_create_them" # Add later if needed
