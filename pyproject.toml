@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classical-quantum-sim"
+version = "0.1.0" # Start with 0.1.0 for first functional version
+authors = [
+  { name="edqa", email="your_email@example.com" }, # Replace with your actual email if desired
+]
+description = "Simulating quantum-like probabilistic states (superposition, measurement) using multi-bit classical integers."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file="LICENSE" } # Assumes you chose MIT or Apache-2.0 and the file exists
+keywords = ["quantum simulation", "classical simulation", "probabilistic computing", "bit manipulation"]
+classifiers = [
+    "Development Status :: 3 - Alpha", # Changed from Pre-Alpha as we have basic functionality
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License", # Or "License :: OSI Approved :: Apache Software License"
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Hardware :: Symmetric Multi-processing", # Relevant due to bit-level parallelism goal
+]
+
+# Add dependencies here if/when needed
+dependencies = [
+    # "numpy >= 1.20", # Uncomment if you start using numpy for random numbers or array ops
+]
+
+# Optional dependencies (e.g., for visualization or advanced features)
+# [project.optional-dependencies]
+# dev = [
+#     "pytest",
+#     "black",
+#     "ruff",
+# ]
+# viz = [
+#     "matplotlib",
+# ]
+
+[project.urls]
+"Homepage" = "https://github.com/edqa/classical-quantum-sim"
+"Repository" = "https://github.com/edqa/classical-quantum-sim.git"
+"Bug Tracker" = "https://github.com/edqa/classical-quantum-sim/issues"
+# "Documentation" = "link_to_docs_if_you_create_them" # Add later if needed
