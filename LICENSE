@@ -19,3 +19,61 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+
+**3. `pyproject.toml` (Optional Minor Update)**
+```toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "classical-quantum-sim"
+version = "0.2.0" # Updated version
+authors = [
+  { name="edqa", email="your_email@example.com" },
+]
+description = "Simulating quantum-like probabilistic states, phase, and correlations using multi-bit classical integers." # Slightly updated description
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file="LICENSE" }
+keywords = ["quantum simulation", "classical simulation", "probabilistic computing", "bit manipulation", "phase simulation", "entanglement simulation"] # Added keywords
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education", # Added
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License", # Or Apache-2.0
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Hardware :: Symmetric Multi-processing",
+]
+
+# Add dependencies here if/when needed
+dependencies = [
+    # "numpy >= 1.20", # Uncomment if you start using numpy
+]
+
+# Optional dependencies
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",   # For running tests
+    "black>=23.0",  # Optional: Code formatter
+    "ruff"          # Optional: Fast linter/formatter
+]
+# viz = [
+#     "matplotlib",
+# ]
+
+[project.urls]
+"Homepage" = "https://github.com/edqa/classical-quantum-sim"
+"Repository" = "https://github.com/edqa/classical-quantum-sim.git"
+"Bug Tracker" = "https://github.com/edqa/classical-quantum-sim/issues"
